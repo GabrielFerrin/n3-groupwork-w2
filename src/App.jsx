@@ -1,14 +1,12 @@
-import { useState } from 'react'
 import './App.css'
 import CategeryList from './components/CategoryList/CategoryList'
+import MyRoutes from './MyRoutes'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <CategeryList />
-      
+      <MyRoutes />
     </>
   )
 }

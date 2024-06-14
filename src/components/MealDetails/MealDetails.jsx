@@ -41,8 +41,8 @@ const MealDetails = () => {
         width="420"
         height="315"
         src={meal.strYoutube.replace("watch?v=", "embed/")}
-        frameborder="0"
-        allowfullscreen
+        frameBorder="0"
+        allowFullScreen
       ></iframe>
     </div>
   )
