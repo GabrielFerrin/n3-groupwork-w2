@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import CategoryItem from "../CategoryItem/CategoryItem";
 import './CategoryList.css';
 
-function CategoryList() {
+function CategeryList() {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   useEffect(() => {
@@ -44,4 +44,4 @@ function CategoryList() {
   )
 }
 
-export default CategoryList
+export default CategeryList
