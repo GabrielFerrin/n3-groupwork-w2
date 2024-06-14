@@ -1,14 +1,17 @@
 .meal-details {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  gap: 2rem;
+  height: 100vh;
+  gap: 1rem;
   background-color: var(--bg-main);
   padding: 2rem;
+  padding-left: 0;
+  overflow-y: scroll;
 }
 
 .meal-photo-container {
   text-align: center;
+  position: relative;
 }
 
 .meal-photo {
@@ -19,7 +22,8 @@
   border-radius: var(--radius);
   height: 300px;
   width: 100%;
-  background-color: rebeccapurple;;
+  background-color: rebeccapurple;
+  ;
 }
 
 .meal-photo img {
@@ -30,35 +34,41 @@
 }
 
 .meal-name {
+  position: absolute;
+  top: calc(1rem);
+  left: calc(1rem);
   background-color: var(--bg-element);
   width: 400px;
-  height: 140px;
+  height: 55px;
   border-radius: 1.2rem;
   text-align: center;
-  padding: 2rem;
-  color:#273240;
-}
-
-.meal-grid{
+  padding: 1rem;
+  color: #273240;
   display: flex;
   align-items: center;
-  gap: 2rem;
-  height: 100%;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.meal-grid {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .meal-instruction {
   text-align: justify;
   width: 70%;
-  height: 100%;
   background-color: var(--bg-element);
   padding: 2rem;
   border-radius: 1.2rem;
-  color:#273240;
+  color: #273240;
   flex-grow: 1;
   font-size: large;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
 }
-
-
 
 .meal-ingredients-container {
   background-color: var(--bg-element);
@@ -70,9 +80,16 @@
   font-size: 15px;
   flex-grow: 1;
   font-size: large;
+  display: flex;
+  flex-direction: column;
+}
+
+.meal-ingredients-container h3 {
+  margin-bottom: 1rem;
 }
 
 .meal-details iframe {
   width: 100% !important;
+  min-height: 500px;
   border-radius: var(--radius);
 }

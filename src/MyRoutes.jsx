@@ -6,8 +6,8 @@ function MyRoutes() {
   return (
     <Routes>
       <Route path="/" element={<h1>Home</h1>} />
-      <Route path="/mealsList" element={<MealList />} />
-      <Route path="/mealDetail" element={<MealDetails />} />
+      <Route path="/mealsList/:category" element={<MealList />} />
+      <Route path="/meal/:mealId" element={<MealDetails />} />
     </Routes>
   )
 }
