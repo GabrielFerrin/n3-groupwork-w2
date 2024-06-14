@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --bg-main: #F3F3F8;
+  --bg-element: #FFFFFF;
+  --contrast01: #525298;
+  --contrast02: #E2E2F0;
+  --text-main: #273240;
+  --placeholder: #c1baba;
+  --outline: #08A0F7;
+  --radius: 1.2rem;
+  --input-radius: 0.8rem;
+}
+
+#root {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-main);
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.meal-details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 2rem;
+  background-color: var(--bg-main);
+  padding: 2rem;
+}
+
+.meal-photo-container {
+  text-align: center;
+}
+
+.meal-photo {
+  background-color: #273240;
+  align-items: center;
+  display: inline-block;
+  justify-content: space-between;
+  border-radius: var(--radius);
+  height: 300px;
+  width: 100%;
+  background-color: rebeccapurple;;
+}
+
+.meal-photo img {
+  border-radius: var(--radius);
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover;
+}
+
+.meal-name {
+  background-color: var(--bg-element);
+  width: 400px;
+  height: 140px;
+  border-radius: 1.2rem;
+  text-align: center;
+  padding: 2rem;
+  color:#273240;
+}
+
+.meal-grid{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+}
+
+.meal-instruction {
+  text-align: justify;
+  width: 70%;
+  height: 100%;
+  background-color: var(--bg-element);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  color:#273240;
+  flex-grow: 1;
+  font-size: large;
+}
+
+
+
+.meal-ingredients-container {
+  background-color: var(--bg-element);
+  border-radius: 1.2rem;
+  height: 100%;
+  width: 30%;
+  height: 100%;
+  padding: 2rem;
+  font-size: 15px;
+  flex-grow: 1;
+  font-size: large;
+}
+
+.meal-details iframe {
+  width: 100% !important;
+  border-radius: var(--radius);
+}
