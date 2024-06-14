@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --bg-main: #f3f3f8;
+  --bg-element: #ffffff;
+  --contrast01: #525298;
+  --contrast02: #e2e2f0;
+  --text-main: #273240;
+  --placeholder: #c1baba;
+  --outline: #08a0f7;
+  --radius: 1.2rem;
+  --input-radius: 0.8rem;
+}
+
+#root {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-main);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.meal-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  
+}
+
+.meal-list p {
+  text-align: center;
+  margin: 0; /* Ajuste de márgenes para el texto */
+  padding: 10px 0; /* Espaciado interno para el texto */
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #52529898; 
+
+}
+
+.meal-list .meal-contenedor {
+  width: 200px; /* Ancho fijo para los cuadritos */
+  margin: 15px; /* Espaciado entre los cuadritos */
+  border: 1px solid #ccc; /* Borde alrededor de los cuadritos */
+  border-radius: 8px; /* Bordes redondeados */
+  overflow: hidden; /* Evitar desbordamiento del contenido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para los cuadritos */
+  transition: transform 0.3s; /* Transición suave para efectos */
+}
+
+.meal-list .meal-contenedor:hover {
+  transform: scale(1.15); /* Efecto de agrandamiento al pasar el ratón */
+}
+
+.meal-list .meal-contenedor img {
+  width: 100%; /* Imagen ajustada al ancho del contenedor */
+  height: 100; /* Mantener proporciones de la imagen */
+  display: block; /* Evitar espacios debajo de la imagen */
+}
