@@ -33,11 +33,12 @@
   position: absolute;
   top: calc(1rem);
   left: calc(1rem);
-  background-color: var(--bg-element);
+  background-color: var(--text-main);
+  color: var(--bg-element);
   height: 55px;
   border-radius: 1.2rem;
   text-align: center;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;

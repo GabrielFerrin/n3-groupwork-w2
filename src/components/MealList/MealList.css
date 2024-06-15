@@ -14,6 +14,9 @@
 .meal-list a {
   text-decoration: none;
   color: inherit;
+  position: relative;
+  display: block;
+  height: 300px;
 }
 
 .meal-list p {
@@ -21,25 +24,28 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 1rem;
-  padding-top: .5rem;
-  font-size: 1.1rem;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--bg-element);
+  color: var(--text-main);
 }
 
 .meal-list .meal-contenedor {
   max-width: 300px;
   min-width: 170px;
-  height: auto;
+  height: max-content;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
-  background-color: var(--bg-element);
+  background-color: var(--bg-main);
 
   &:hover {
-    background-color: var(--contrast01);
     color: var(--bg-main);
-    font-weight: 700;
   }
 }
 

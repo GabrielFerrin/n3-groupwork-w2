@@ -15,8 +15,6 @@ const MealDetails = () => {
         fetch('https://www.themealdb.com/api/json/v1/1/' +
           'search.php?s=' + mealId);
       const response = await rawResponse.json();
-      console.log(response);
-      console.log(response.meals[0].strYoutube);
       let items = [];
       for (let i = 0; i <= 20; i++) {
         response.meals[0][`strIngredient${i}`] &&
@@ -38,7 +36,7 @@ const MealDetails = () => {
       </div>
       <div className="meal-name">
         <h3>{meal.strMeal}</h3>
-        <p>Category: {meal.strCategory}</p>
+        {/* <p>Category: {meal.strCategory}</p> */}
       </div>
     </div>
     <div className='meal-grid'>

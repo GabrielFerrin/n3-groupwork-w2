@@ -113,6 +113,10 @@
   background-color: transparent;
 }
 
+.category-list img {
+  border-radius: var(--radius);
+}
+
 .theme-switch-wrapper {
   justify-self: right;
 }
