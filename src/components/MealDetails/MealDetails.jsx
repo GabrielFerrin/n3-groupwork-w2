@@ -53,13 +53,13 @@ const MealDetails = () => {
         ))}
       </div>
     </div>
-    <iframe
+    {meal.strYoutube && (<iframe
       width="420"
       height="315"
       src={meal.strYoutube && meal.strYoutube.replace("watch?v=", "embed/")}
       frameBorder="0"
       allowFullScreen
-    ></iframe>
+    ></iframe>)}
   </div>)
   )
 }

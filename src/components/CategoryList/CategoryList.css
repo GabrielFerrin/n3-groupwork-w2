@@ -96,6 +96,11 @@
   }
 }
 
+.category-list .category-item.selected {
+  background-color: var(--text-main);
+  color: var(--bg-element);
+}
+
 .category-list a {
   display: flex;
   justify-content: space-between;

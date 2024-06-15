@@ -5,6 +5,7 @@ import './CategoryList.css';
 function CategeryList({ theme, setTheme }) {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+  const [selected, setSelected] = useState('');
   useEffect(() => {
     const fetchData = async () => {
       const rawItems = await
@@ -52,7 +53,7 @@ function CategeryList({ theme, setTheme }) {
       <div className="categories-container">
         {filteredData && filteredData.map((item) => (
           <CategoryItem key={'cat-tiem-' + item.idCategory}
-            item={item} />
+            item={item} selected={selected} setSelected={setSelected} />
         ))}
       </div>
     </div>

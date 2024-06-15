@@ -15,19 +15,18 @@ export default function MealList() {
         `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
       );
       const jsonResponse = await response.json();
-      console.log(jsonResponse);
       setData(jsonResponse.meals);
       setTimeout(() => {
         setLoading(false);
       }, 500);
     }
-    getData(); // Llama a la función cuando el componente se monte
+    getData();
   }, [category]);
 
   return (loading ? (<Loading />) :
     (<div className="meal-list">
       {data.map((item) => (
-        <div className="meal-contenedor">
+        <div className="meal-contenedor" key={item.idMeal}>
           <Link to={`/meal/${item.strMeal}`} key={item.strMeal}>
             <img src={item.strMealThumb} alt="" />
             <p>{item.strMeal}</p>
