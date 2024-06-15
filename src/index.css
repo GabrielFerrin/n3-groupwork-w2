@@ -16,6 +16,7 @@ body, html, #root, .app {
   color: var(--text-main);
   display: flex;
   overflow: hidden;
+  width: 100%;
   --radius: 1.2rem;
   --input-radius: 0.8rem;
 }

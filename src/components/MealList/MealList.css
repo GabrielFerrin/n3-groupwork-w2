@@ -1,6 +1,7 @@
 .meal-list {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   gap: 2rem;
   padding: 2rem;
   padding-left: 0;
@@ -28,6 +29,7 @@
 .meal-list .meal-contenedor {
   max-width: 300px;
   min-width: 170px;
+  height: auto;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -36,7 +38,8 @@
 
   &:hover {
     background-color: var(--contrast01);
-    color: var(--bg-main)
+    color: var(--bg-main);
+    font-weight: 700;
   }
 }
 

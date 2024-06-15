@@ -19,7 +19,7 @@ export default function MealList() {
       setData(jsonResponse.meals);
       setTimeout(() => {
         setLoading(false);
-      }, 600);
+      }, 500);
     }
     getData(); // Llama a la función cuando el componente se monte
   }, [category]);

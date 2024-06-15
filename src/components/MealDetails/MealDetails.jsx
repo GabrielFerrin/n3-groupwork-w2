@@ -26,7 +26,7 @@ const MealDetails = () => {
       setIngredients(items);
       setTimeout(() => {
         setLoading(false);
-      }, 600);
+      }, 500);
     }
     fetchMeal();
   }, []);
