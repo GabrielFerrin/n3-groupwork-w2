@@ -34,11 +34,10 @@
   top: calc(1rem);
   left: calc(1rem);
   background-color: var(--bg-element);
-  width: 400px;
   height: 55px;
   border-radius: 1.2rem;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
