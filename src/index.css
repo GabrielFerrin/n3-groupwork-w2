@@ -1,15 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root {
-  --bg-main: #F3F3F8;
-  --bg-element: #FFFFFF;
-  --contrast01: #525298;
-  --contrast02: #E2E2F0;
-  --text-main: #273240;
-  --placeholder: #c1baba;
-  --outline: #08A0F7;
-  --radius: 1.2rem;
-  --input-radius: 0.8rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body, html, #root, .app {
@@ -22,12 +16,28 @@ body, html, #root, .app {
   color: var(--text-main);
   display: flex;
   overflow: hidden;
+  --radius: 1.2rem;
+  --input-radius: 0.8rem;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.app.light {
+  --bg-main: #F3F3F8;
+  --bg-element: #FFFFFF;
+  --contrast01: #525298;
+  --contrast02: #E2E2F0;
+  --text-main: #273240;
+  --placeholder: #c1baba;
+  --outline: #08A0F7;
+}
+
+.app.dark {
+  --bg-main: #070707;
+  --bg-element: #0f0f0f;
+  --contrast01: #ff7b00;
+  --contrast02: #272727;
+  --text-main: #e6e6e6;
+  --placeholder: #383838;
+  --outline: #08A0F7;
 }
 
 ::-webkit-scrollbar {

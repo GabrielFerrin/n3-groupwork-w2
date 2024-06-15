@@ -4,6 +4,7 @@
   align-items: center;
   width: 100%;
   height: 100vh;
+  background-color: var(--bg-main);
 }
 
 .loader {
@@ -12,7 +13,7 @@
   height: auto;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: calc(100vw / 60) solid #514b82;
+  border: calc(100vw / 80) solid var(--contrast01);
   animation:
     l20-1 0.8s infinite linear alternate,
     l20-2 1.6s infinite linear;

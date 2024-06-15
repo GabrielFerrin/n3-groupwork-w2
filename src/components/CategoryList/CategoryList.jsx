@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import CategoryItem from "../CategoryItem/CategoryItem";
 import './CategoryList.css';
 
-function CategeryList() {
+function CategeryList({ theme, setTheme }) {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   useEffect(() => {
@@ -15,12 +15,27 @@ function CategeryList() {
     }
     fetchData();
   }, []);
+  const toggleTheme = (e) => {
+    e.target.tagName === "INPUT" &&
+      setTheme(theme === 'light' ? 'dark' : 'light');
+  }
   return (
     <div className="category-list">
-      <h1>
-        <img src="/food-icon.svg" alt="Food icon" height={22} />
-        Meals
-      </h1>
+      <div className="main-title">
+        <h1>
+          <img src="/food-icon.svg" alt="Food icon" height={22} />
+          Meals
+        </h1>
+        <div className="theme-switch-wrapper"
+          onClick={(e) => toggleTheme(e)}>
+          <input type="checkbox" className="checkbox" id="checkbox" />
+          <label htmlFor="checkbox" className="checkbox-label">
+            <i className="fas fa-moon"></i>
+            <i className="fas fa-sun"></i>
+            <span className="ball"></span>
+          </label>
+        </div>
+      </div>
       <label htmlFor="search">
         <input id="search" type="text" placeholder="Search Category"
           onChange={(e) => setFilteredData(data.filter((item) =>

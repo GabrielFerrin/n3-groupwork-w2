@@ -10,21 +10,27 @@
   max-width: 450px;
 }
 
-.category-list h1 {
-  align-self: flex-start;
-  font-size: 1rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
+.category-list .main-title {
   padding: 1.5rem;
   gap: 1rem;
   background-color: var(--bg-element);
   border-radius: var(--radius);
   height: 50px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.category-list label {
+.category-list h1 {
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.category-list > label {
   background-color: var(--bg-element);
   display: flex;
   justify-content: space-between;
@@ -51,7 +57,8 @@
   outline: none;
   border: none;
   flex-grow: 1;
-
+  background-color: var(--bg-element);
+  color: currentColor;
   &::placeholder {
     color: var(--placeholder);
   }
@@ -99,4 +106,45 @@
   text-decoration: none;
   color: currentColor;
   background-color: transparent;
+}
+
+.theme-switch-wrapper {
+  justify-self: right;
+}
+
+.theme-switch-wrapper .checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.theme-switch-wrapper .checkbox-label {
+  background-color: var(--contrast01);
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-switch-wrapper .fa-moon {color: var(--bg-element);}
+
+.theme-switch-wrapper .fa-sun {color: var(--bg-element);}
+
+.theme-switch-wrapper .checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.theme-switch-wrapper .checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
 }
