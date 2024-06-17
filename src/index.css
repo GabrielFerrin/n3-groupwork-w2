@@ -12,6 +12,7 @@ body, html, #root, .app {
 }
 
 .app {
+  position: relative;
   font-family: 'Poppins', sans-serif;
   color: var(--text-main);
   display: flex;
@@ -68,4 +69,17 @@ body, html, #root, .app {
 ::-moz-scrollbar-thumb {
   background-color: var(--contrast01);
   border-radius: 5px;
+}
+
+.hide-menu {
+  position: absolute;
+  top: 5px;
+  left: 287px;
+  z-index: 1;
+  cursor: pointer;
+  transition: all .5s ease-in;
+}
+
+.hide-menu.toggled {
+  transform: translateX(-287px) rotate(180deg);
 }

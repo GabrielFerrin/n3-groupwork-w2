@@ -4,7 +4,7 @@ import "./MealList.css";
 import { Link, useParams } from "react-router-dom";
 import Loading from "../Loading/Loading";
 
-export default function MealList() {
+export default function MealList({ toggleMenu }) {
   const { category } = useParams();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -24,7 +24,7 @@ export default function MealList() {
   }, [category]);
 
   return (loading ? (<Loading />) :
-    (<div className="meal-list">
+    (<div className={"meal-list" + (toggleMenu ? ' padding' : '')}>
       {data.map((item) => (
         <div className="meal-contenedor" key={item.idMeal}>
           <Link to={`/meal/${item.strMeal}`} key={item.strMeal}>

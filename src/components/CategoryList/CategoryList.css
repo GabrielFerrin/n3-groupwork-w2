@@ -1,13 +1,20 @@
 .category-list {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
   gap: 1.5rem;
   min-height: 100vh;
+  max-width: 500px;
   background-color: var(--bg-main);
-  min-width: 340px;
-  max-width: 450px;
+  transition: all .5s ease-in;
+}
+
+.category-list.hide {
+  max-width: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .category-list .main-title {
@@ -119,6 +126,11 @@
 
 .theme-switch-wrapper {
   justify-self: right;
+  transition: all .5s ease-in;
+}
+
+.theme-switch-wrapper.hide {
+  opacity: 0;
 }
 
 .theme-switch-wrapper .checkbox {

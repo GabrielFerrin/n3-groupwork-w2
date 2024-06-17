@@ -1,14 +1,18 @@
 .meal-list {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
   gap: 2rem;
   padding: 2rem;
   padding-left: 0;
-  justify-content: space-evenly;
   max-height: 100vh;
   overflow-x: auto;
   background-color: var(--bg-main);
+  transition: all .5s ease-in;
+}
+
+.meal-list.padding {
+  padding-left: 2rem;
 }
 
 .meal-list a {
@@ -16,7 +20,7 @@
   color: inherit;
   position: relative;
   display: block;
-  height: 300px;
+  min-height: 300px;
 }
 
 .meal-list p {
@@ -35,8 +39,8 @@
 }
 
 .meal-list .meal-contenedor {
-  max-width: 300px;
   min-width: 170px;
+  flex-grow: 1;
   height: max-content;
   border-radius: var(--radius);
   overflow: hidden;
@@ -55,4 +59,16 @@
 
 .meal-list .meal-contenedor img {
   width: 100%;
+}
+
+@media screen and (max-width: 1355px) {
+  .meal-list {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  } 
+}
+
+@media screen and (max-width: 1025px) {
+  .meal-list {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  } 
 }

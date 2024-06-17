@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import CategoryItem from "../CategoryItem/CategoryItem";
 import './CategoryList.css';
 
-function CategeryList({ theme, setTheme }) {
+function CategoryList({ theme, setTheme, toggleMenu }) {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [selected, setSelected] = useState('');
@@ -21,13 +21,14 @@ function CategeryList({ theme, setTheme }) {
       setTheme(theme === 'light' ? 'dark' : 'light');
   }
   return (
-    <div className="category-list">
+    <div className={"category-list" + (toggleMenu ? ' hide' : '')}>
       <div className="main-title">
         <h1>
           <img src="/food-icon.svg" alt="Food icon" height={22} />
           Meals
         </h1>
-        <div className="theme-switch-wrapper"
+        <div className={"theme-switch-wrapper" +
+          (toggleMenu ? ' hide' : '')}
           onClick={(e) => toggleTheme(e)}>
           <input type="checkbox" className="checkbox" id="checkbox" />
           <label htmlFor="checkbox" className="checkbox-label">
@@ -60,4 +61,4 @@ function CategeryList({ theme, setTheme }) {
   )
 }
 
-export default CategeryList
+export default CategoryList

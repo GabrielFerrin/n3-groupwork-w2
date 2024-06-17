@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Loading from '../Loading/Loading';
 
-const MealDetails = () => {
+const MealDetails = ({ toggleMenu}) => {
   const { mealId } = useParams();
   const [meal, setMeal] = useState({});
   const [ingredients, setIngredients] = useState([]);
@@ -29,7 +29,7 @@ const MealDetails = () => {
     fetchMeal();
   }, []);
   return (loading ? <Loading /> :
-    (<div className="meal-details">
+    (<div className={"meal-details" + (toggleMenu ? ' padding' : '')}>
     <div className="meal-photo-container">
       <div className="meal-photo">
         <img src={meal.strMealThumb} alt={meal.strMeal} />
