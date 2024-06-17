@@ -71,7 +71,7 @@ body, html, #root, .app {
   border-radius: 5px;
 }
 
-.hide-menu {
+.hide-menu {  
   position: absolute;
   top: 5px;
   left: 287px;
@@ -81,5 +81,5 @@ body, html, #root, .app {
 }
 
 .hide-menu.toggled {
-  transform: translateX(-287px) rotate(180deg);
+  transform: translateX(-280px) rotate(180deg);
 }

@@ -29,9 +29,9 @@
   justify-content: center;
   text-align: center;
   width: 100%;
-  padding: 1rem 0;
-  font-size: 1.2rem;
-  font-weight: 500;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   position: absolute;
   bottom: 0;
   background-color: var(--bg-element);
@@ -39,6 +39,7 @@
 }
 
 .meal-list .meal-contenedor {
+  margin-left: 5px;
   min-width: 170px;
   flex-grow: 1;
   height: max-content;
@@ -55,6 +56,11 @@
 
 .meal-list .meal-contenedor:hover {
   transform: scale(1.03);
+}
+
+.meal-list .meal-contenedor:hover p {
+  background-color: var(--text-main);
+  color: var(--bg-main);
 }
 
 .meal-list .meal-contenedor img {
