@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import CategoryList from './components/CategoryList/CategoryList'
-import MyRoutes from './MyRoutes'
+import MyRoutes from "./MyRoutes"
 
 function App() {
   const [theme, setTheme] = useState('light')
